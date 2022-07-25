@@ -1,0 +1,493 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --header-bgcolor: #A10035;
+    --text-color: white;
+    --page-background: #FFE7BF;
+    --navbar-background: #f75877;
+    --nav-item-active-bg : var(--header-bgcolor);
+}
+
+
+/*Header*/
+
+.header{
+    background-color: var(--header-bgcolor);
+    height: 10vh;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header-text{
+    color: white;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+/*Navbar*/
+
+.page-body{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 90vh;
+    background-color: var(--page-background);
+}
+
+.navbar{
+    width: 15vw;
+    height: inherit;
+    background-color: var(--navbar-background);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.nav-menus{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px;
+}
+
+.nav-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.nav-text{
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.nav-item .logo > img{
+    width: 30px;
+}
+
+.nav-item:hover{
+    background-color: var(--nav-item-active-bg);
+    cursor: pointer;
+}
+
+.active{
+    background-color: var(--header-bgcolor);
+}
+
+.title{
+    color: white;
+    font-size: 1.5rem;
+    border-bottom: 1px solid var(--header-bgcolor);
+    font-weight: bold;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title p{
+    margin: 0;
+}
+
+.title > img{
+    width: 30px;
+    border-radius: 50%;
+}
+
+.title > img:hover{
+    cursor: pointer;
+    background-color: var(--header-bgcolor);
+}
+
+.project-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.projects-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.modify, .info{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.project-item-title{
+    font-size: 1rem;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.project-logo{
+    display: flex;
+    align-items: center;
+}
+
+.project-logo>img{
+    width: 20px;
+}
+
+.project-item:hover{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    cursor: pointer;
+}
+
+.modify:hover, .remove:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/*Todo section*/
+
+.todo-items{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    width: 85vw;
+    height: 100%;
+    gap: 30px;
+}
+
+.option-title{
+    font-size: 2rem;
+    color: var(--header-bgcolor);
+    font-weight: bold;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.option-title img{
+    width: 40px;
+    height: 40px;
+}
+
+.option-title img:active{
+    width: 35px;
+    height: 35px;
+}
+
+.option-title img:hover{
+    cursor: pointer;
+}
+
+.items-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.priority {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+.high {
+    background-color: red;
+}
+
+.medium {
+    background-color: orange;
+}
+
+.low {
+    background-color: rgb(23, 226, 23);
+}
+
+.todo-item{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.todo-item:hover{
+    background-color: #f5d2d9;
+    cursor: pointer;
+}
+
+.todo-name{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.todo-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.todo-date{
+    background-color: #A10035;
+    color: var(--text-color);
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.folder-name{
+    background-color: var(--navbar-background);
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--text-color);
+}
+
+.edit > img, .delete > img{
+    width: 30px;
+}
+
+.edit > img:hover, .delete > img:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/*New project modal*/
+
+.modal-container, 
+.modify-project-modal-container{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-container p, 
+.todo-modal-title p,
+.modify-project-modal-container p {
+    margin: 0;
+}
+
+.add-new-project-modal,
+.modify-project-modal {
+    width: 500px;
+    background-color: var(--page-background);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.modal-title, 
+.todo-modal-title{
+    background-color: var(--header-bgcolor);
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modal-title img,
+.todo-modal-title img{
+    width: 30px;
+}
+
+.modal-title img:hover, 
+.todo-modal-title img:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.newproject-form{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.newproject-form .form{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 30px;
+}
+
+.project-name{
+    width: 100%;
+}
+
+.project-name input{
+    width: inherit;
+    outline: 0;
+    border: 0;
+    font-size: 1.2rem;
+    padding-left: 10px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: var(--header-bgcolor);
+}
+
+.project-name input:focus{
+    outline: 1px solid var(--header-bgcolor);
+}
+
+.label{
+    color: var(--header-bgcolor);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.button-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 30px;
+    padding-bottom: 10px;
+}
+
+.button-container #submitbutton, 
+.item-button button,
+#modifybutton{
+    color: var(--text-color);
+    background-color: var(--navbar-background);
+    font-size: 1rem;
+    border: 0;
+    width: 100px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.button-container #submitbutton:hover, 
+.item-button button:hover,
+#modifybutton:hover{
+    background-color: #f5335a;
+    cursor: pointer;
+}
+
+/*Todo item modal section*/
+
+.todo-modal-container, .modify-modal-container{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-modal, .modify-todo{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    background-color: var(--page-background);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.form-item-container{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.form-item{
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item-label{
+    color: var(--header-bgcolor);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.form-input input[type=text]{
+    outline: 0;
+    border: 0;
+    width: 80%;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.form-input input[type=text]:focus, .form-input input[type=datetime-local]:focus{
+    border-bottom: 1px solid var(--header-bgcolor);
+    background-color: #f7cad3;
+}
+
+.form-input input[type=date]{
+    width: 100%;
+    font-size: 1rem;
+    outline: 0;
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+}
+
+.form-input textarea{
+    resize: none;
+    outline: 0;
+    border: 1px solid var(--header-bgcolor);
+    border-radius: 5px;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+}
+
+.form-input select{
+    width: 100%;
+    font-size: 1rem;
+    padding: 5px;
+    border: 1px solid var(--header-bgcolor);
+    outline: 0;
+    border-radius: 5px;
+}
